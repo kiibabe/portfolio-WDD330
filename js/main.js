@@ -10,7 +10,6 @@ const links = [
       }
   ]
 
-let list = document.getElementsByTagName("ol");
 for (const element of links) {
-    document.getElementsByTagName("ol").innerHTML = '<li><a href="' + url + '">' + label + '</a></li>';
+    document.getElementsByTagName("ol")[0].innerHTML = '<li><a href="' + url + '">' + label + '</a></li>';
 }
