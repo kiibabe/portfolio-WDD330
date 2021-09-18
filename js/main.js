@@ -1,4 +1,3 @@
-
 const links = [
     {
       label: "Week1 notes",
@@ -9,7 +8,7 @@ const links = [
         url: "week2/index.html"
       }
   ]
-
-for (const element of links) {
-    document.getElementsByTagName("ol")[0].innerHTML = '<li><a href="' + url + '">' + label + '</a></li>';
+  
+for (const e of links) {
+    document.getElementById("test").innerHTML += '<li><a href="' + e.url + '">' + e.label + '</a></li>';
 }
