@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Week 01 - WDD 330 Portfolio - Kisetsu Irie</title>
+        <link href="style.css" rel="stylesheet"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>WDD 330 Portfolio - Kisetsu Irie</h1>
+        </header>
+
+
+        <div id="main">
+            <h2>Week 01</h2>
+            <h3>Notes:</h3>
+                <ul>
+                    <li>WDD 330 is designed to teach students the skills to create web applications using HTML, CSS, and JavaScript. Students should do this with plain/pure languages, without any third-party framework, libraries, or plugins.</li>
+                    <li>In this course, the team exists to evaluate my own learning not the team's.</li>
+                    <br>
+                    <li>Github Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website. You can see examples of GitHub Pages sites in the GitHub Pages examples collection. ("About GitHub Pages" in Github Docs)</li>
+                    <li>The list used in main.js was an array of objects. It allows us to store multiple data for an object of the list.</li>
+                    <li>When referencing to an object in an array, we can use "index.name" format.</li>
+                    <li>We can use &lt;pre> and &lt;code> tags when we want to include code snippets in our webpages.</li>
+                    <br>
+                    <li>UX is the most important thing.</li>
+                    <li>The ultimate word for the good UX is simple. Keep it simple but useful, and helpful. When there is usability, true beauty comes into play.</li>
+                    <li>Think about how users use it. Place buttons at the places that are easy to reach. Usually at the bottom.</li>
+                    <li>Speed is also important. Optimize the size of files used in the web page. Using web fonts, svg files, and reducing and minimizing the file sizes are always good practices.</li>
+                </ul>
+
+            <h3>Coding Part:</h3>
+            <p>Below are the codes for the portfolio index. It includes a dynamic table of contents.</p>
+            
+            <pre><code>
+            <b>index.html</b>
+
+            &lt;!DOCTYPE html>
+            &lt;html>
+                &lt;head>
+                    &lt;meta charset="UTF-8" />
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                    &lt;title>WDD 330 Portfolio - Kisetsu Irie &lt;/title>
+                    &lt;link href="css/style.css" rel="stylesheet">&lt;/script>
+                &lt;/head>
+
+                &lt;body>
+                    &lt;header>
+                        &lt;h1>WDD 330 Portfolio - Kisetsu Irie&lt;/h1>
+                    &lt;/header>
+
+
+                    &lt;div id="main">
+                        &lt;h2>Block 1:v/h2>
+                        &lt;ol id="list">&lt;/ol>
+                    &lt;/div>
+
+                    &lt;script src="js/main.js" type="text/javascript">&lt;/script>
+                &lt;/body>
+            &lt;/html>
+            </code></pre>
+
+            <pre><code>
+            <b>main.js</b>
+
+            window.addEventListener('load', list)
+                
+            const links = [
+                {
+                label: "Week1 notes",
+                url: "week1/index.html"
+                }
+            ]
+
+            function list() {
+                for (const e of links) {
+                    document.getElementById("test").innerHTML += '&lt;li>&lt;a href="' + e.url + '">' + e.label + '&lt;/a>&lt;/li>';
+                }
+            }
+            </code></pre>
+
+            <pre><code>
+            <b>style.css</b>
+
+            html {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color:rgb(238, 238, 238);
+                color:#3d3d3d;
+                font-size: 16px;
+            }
+            header {
+                background-color: rgb(60, 160, 127);
+                padding: 2rem;
+            }
+            h1 {
+                font-size: 2.5rem;
+                color: rgb(238, 238, 238);
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            h3 {
+                font-size: 1.5rem;
+            }
+            #main {
+                padding: 1.5rem;
+            }
+            a {
+                color:rgb(13, 148, 103);
+                font-size: 1.2rem;
+            }
+            </code></pre>
+
+            <h3>Question:</h3>
+            <p>I was not very sure about how everything works for this assignment. Am I doing this alright? If anything of what I've done for this week is not reaching the expectation, please let me know. I'd love to know and improve from the next week. Thank you very much!</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(238, 238, 238);
+    color:#3d3d3d;
+    font-size: 16px;
+}
+header {
+    background-color: rgb(60, 160, 127);
+    padding: 2rem;
+}
+h1 {
+    font-size: 2.5rem;
+    color: rgb(238, 238, 238);
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+#main {
+    padding: 1.5rem;
+}
+a {
+    color:rgb(13, 148, 103);
+    font-size: 1.2rem;
+}
