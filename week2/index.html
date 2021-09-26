@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Week 02 - WDD 330 Portfolio - Kisetsu Irie</title>
+        <link href="../css/style.css" rel="stylesheet"></link>
+    </head>
+
+    <body>
+        <header>
+            <h1>WDD 330 Portfolio - Kisetsu Irie</h1>
+        </header>
+
+
+        <div id="main">
+            <a href="../index.html">&lt; Go Back to Index</a>
+
+
+            <h2>Week 02</h2>
+            <h3>Notes:</h3>
+                <h4>Chapter 2</h4>
+                <ul>
+                    <li>Comments are important for documenting your code</li>
+                    <li>Javascript uses C-style syntax - Best to separate code with newline and semicolon</li>
+                    <li>Reserved words like await, variable types (bool, int, etc) cannot be used to name variables</li>
+                    <li>Anything that isn’t a primitive type (string, symbol, number, boolean, undefined, null) is an object, and `typeof` can be used to get the type of a value</li>
+                    <li>Scope can define where a variable can be used within the code depending on whether it’s global or local</li>
+                    <li>Variable names can start with upper/lower case letters, underscore, or dollar sign and can contain numbers but cannot start with them</li>
+                    <li>toUpperCase() can make a string all uppercase, while toLowerCase() makes the string all lowercase</li>
+                    <li>includes() can be used on a string to see if a certain character exists in the string</li>
+                    <li>Template literals are written with backticks (`) and JS expressions can be inserted within a template literal</li>
+                    <li>Symbols can be used to create unique values and avoid duplication</li>
+                    <li>Numbers can also be represented in octal, hexadecimal, and exponential notation</li>
+                    <li>Variable values can be reassigned using = , but can also be incremented by += and decremented by -=</li>
+                    <li>Infinity is an error value that means the number is too big to be deal with in JS</li>
+                    <li>Strings and numbers can be converted into each other using parseInt() and toString()</li>
+                    <li>Undefined means value is missing, while null means “no value” and acts like a 0</li>
+                    <li>Bitwise operators (& for AND and | for OR) work with numbers that are written in binary</li>
+                    <li>Soft equality (==) will try to convert and match the data types automatically, while hard equality (===) will check the values as their original data types</li>
+                </ul>
+                <h4>Chapter 3</h4>
+                <ul>
+                    <li>Arrays are lists of values and can be created by [] or the Array constructor</li>
+                    <li>Values can be added by assigning them to different indices within the array</li>
+                    <li>You can have different types in one array (like string, numbers, other arrays, etc)</li>
+                    <li>Values can be deleted using the “delete” operator</li>
+                    <li>Destructuring means to take values out of the array to use separately</li>
+                    <li>Arrays have a length property that shows how many values are in the array</li>
+                    <li>pop() removes the last item, shift() removes the first item, push() adds a new value to the end, and unshift() adds a value to the start</li>
+                    <li>concat() or a spread operator (...) can be used to merge one or more arrays together</li>
+                    <li>join() can be used to convert an array into a string, and you can specify what character to join the strings within the array with</li>
+                    <li>slice() can create an array from another array, and splice() can replace a value in an array with another</li>
+                    <li>There are multiple ways to find if a value is in an array, like indexOf() and includes()</li>
+                    <li>Arrays can be multidimensional, like a matrix</li>
+                    <li>A Set is like an array but it cannot contain duplicate values, only unique values</li>
+                    <li>Memory leaks happen when a variable that isn’t being used is still stored in memory, but modern languages like JS have garbage collection which automatically removes unused values</li>
+                    <li>Maps can be used to keep a list of key and value pairs, keys need to be strings and can be used to refer to the value stored with them</li>
+                    <li>get() can be used to look up a value by key, has() checks if the value exists, delete() removes the key value pair, and set() will add a key value pair</li>
+                    <li>If/else statements can be used to run code only if a certain condition is met</li>
+                    <li>Ternary operators and switch statements fulfill similar functions but with different syntax and use cases</li>
+                    <li>While and for loops let us run code repeatedly until a certain condition is met (or infinitely, for an infinite loop)</li>
+                    <li>For loops are good for looping through arrays due to the syntax of the for loop</li>
+                </ul>
+                <h4>Chapter 4</h4>
+                <ul>
+                    <li>Functions can be declared using the “function” key word and with a name</li>
+                    <li>Anonymous functions don’t have names and can be assigned to variables</li>
+                    <li>Functions are called by entering its name with parentheses, and either return undefined by default or whatever value the programmer set it to return</li>
+                    <li>Parameters are set when the function is defined, while arguments are for when the function is invoked</li>
+                    <li>Values can be passed into functions on the fly using parameters/arguments</li>
+                    <li>You can pass as many arguments as you want into a function, and the rest operator (...) can put all arguments into an array to be used within the function</li>
+                    <li>Default parameters can be set within the function declaration using the equal sign</li>
+                    <li>Arrow functions (const square = x => x*x) are simpler ways to create anonymous functions</li>
+                    <li>Hoisting allows functions/variables to be called before they’re defined in the code</li>
+                    <li>Callbacks allow other functions to be passed as arguments into a function, which can be called within that function</li>
+                    <li>forEach(), map(), reduce(), and filter() are some ways to iterate through arrays</li>
+                </ul>
+
+            <h3>Coding Exercise:</h3>
+            <p>Below are the codes for Quiz Ninja Project.</p>
+            <a href="quiz-ninja.html">> Play Quiz Ninja</a>
+            
+            <pre><code>
+            <b>quiz-ninja.html</b>
+
+            &lt;!DOCTYPE html>
+                &lt;html>
+                    &lt;head>
+                        &lt;meta charset="UTF-8" />
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        &lt;title>Week 02 - WDD 330 Portfolio - Kisetsu Irie&lt;/title>
+                        &lt;link href="quiz-ninja.css" rel="stylesheet">&lt;/script>
+                    &lt;/head>
+
+                    &lt;body>
+                    &lt;section class='dojo'>
+                        &lt;div class="wrapper">
+                        &lt;header>
+                            &lt;h1>Quiz Ninja!&lt;/h1>
+                            &lt;button onclick="start(quiz)">Start&lt;/button>
+                        &lt;/header>
+                        &lt;/div>
+                    &lt;/section>
+                    &lt;script type="text/javascript" src="quiz-ninja.js">&lt;/script>
+                    &lt;/body>
+                &lt;/html>
+  
+            </code></pre>
+
+            <pre><code>
+            <b>quiz-ninja.js</b>
+
+            // Set the questions
+            const quiz = [
+                ["What is the name of world's highest mountain","Mount Everest"],
+                ["Who is the current president of the United States?","Joe Biden"],
+                ["What is the name of world's longest river?","Nile"]
+            ];
+
+            function start(quiz){
+            let score = 0;
+
+            // main loop
+            for(const [question,answer] of quiz){
+                const response = ask(question);
+                check(response,answer);
+            }
+            // end of main game loop
+            gameOver();
+
+            // ask and check
+            function ask(question){
+                return prompt(question);
+            }
+
+            function check(response,answer){
+                // check if answer is correct
+                if(response === answer){
+                alert('Correct!');
+                // increase score by 1
+                score++;
+                } else {
+                alert(`Wrong. The correct answer was ${answer}`);
+                }
+            }
+
+            function gameOver(){
+                // Report the player's score
+                alert(`Game Over, you scored ${score} point${score !== 1 ? 's' : ''}`);
+            }
+            }
+            </code></pre>
+
+            <pre><code>
+            <b>quiz-ninja.css</b>
+
+            @import url('https://fonts.googleapis.com/css?family=Baloo+Da|Roboto');
+
+            body{
+            background: #5F1C1C;
+            font-family: 'Roboto', sans-serif;
+            }
+            .dojo{
+            background: url(https://cdn.rawgit.com/alexmwalker/6acbe9040d9fe6e5e9fd758a25e1b2a5/raw/9c8131eb2ccc1e3839a5a5114cb16b5dc74daf04/dojo.svg) no-repeat;
+            width: 100%;
+            height: 800px;
+            background-size: 100% auto;
+            padding-top: 10px;
+            }
+            .wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            background: rgba(255,255,255,.9);
+            margin: 150px 33%;
+            box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            }
+            h1 {
+            color: #612aaa;
+            font-family: 'Baloo Da', cursive;
+            font-weight: 900;
+            text-align: center;
+            font-size: 48px;
+            margin: 0;
+            }
+            button {
+            color: #ffffff;
+            background-color: #611BBD;
+            border-color: #130269;
+            border-radius: 4px;
+            margin: 0.2em 0;
+            display: block;
+            width: 100%;
+            font-size: 24px;
+            }
+            </code></pre>
+
+            <h3>Question:</h3>
+            <p>My question is how this reading assignment should be done. The instruction tells me to submit either the notes OR a code exercise. So, did I get a full credit for the assignment even if I didn't inclide the coding exercise part? I want to make sure.</p>
+            
+            <a href="../index.html">&lt; Go Back to Index</a>
+        </div>
+    </body>
+</html>
