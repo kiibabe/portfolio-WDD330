@@ -26,199 +26,134 @@
                     <li>A method is when a property’s value is a function</li>
                     <li>Objects are used to keep any related info and functionality together</li>
                     <li>Object literals example:
-                    <pre><code>const superman = {
-                        name: 'Superman',
-                        'real name': 'Clark Kent',
-                        height: 75,
-                        weight: 235,
-                        hero: true,
-                        villain: false,
-                        allies: ['Batman','Supergirl','Superboy'],
-                        fly() {
-                            return 'Up, up and away!';
+                    <pre><code>     const ryan = {
+                        name: 'Ryan',
+                        'full name': 'Ryan Gosling',
+                        height: 6,
+                        weight: 168,
+                        actor: true,
+                        actress: false,
+                        coster: ['Emma','Rachel','Harrison'],
+                        dance() {
+                            return 'Dance dance, la la land!';
                         }
                     };</code></pre></li>
                     <li>The ability to create objects with computed property keys was introduced in ES6. This means that JavaScript code can be placed inside square brackets and the property key will be the return value of that code.
-                        <pre><code>
-                            const hulk = { name: 'Hulk', ['catch' + 'Phrase']: 'Hulk Smash!' };
-                        </code></pre>
+                        <pre><code>     const emma = { name: 'Emma', ['catch' + 'Phrase']: 'Emma Stone' };</code></pre>
+                        <pre><code>     &lt;&lt; { name: 'Emma', catchPhrase: 'Emma Stone' }</code></pre>
                     </li>
-                    <li>includes() can be used on a string to see if a certain character exists in the string</li>
-                    <li>Template literals are written with backticks (`) and JS expressions can be inserted within a template literal</li>
-                    <li>Symbols can be used to create unique values and avoid duplication</li>
-                    <li>Numbers can also be represented in octal, hexadecimal, and exponential notation</li>
-                    <li>Variable values can be reassigned using = , but can also be incremented by += and decremented by -=</li>
-                    <li>Infinity is an error value that means the number is too big to be deal with in JS</li>
-                    <li>Strings and numbers can be converted into each other using parseInt() and toString()</li>
-                    <li>Undefined means value is missing, while null means “no value” and acts like a 0</li>
-                    <li>Bitwise operators (& for AND and | for OR) work with numbers that are written in binary</li>
-                    <li>Soft equality (==) will try to convert and match the data types automatically, while hard equality (===) will check the values as their original data types</li>
-                </ul>
+                    <li>To call an object’s method we can also use dot or bracket notation
+                        <pre><code>     ryan.dance()
+    &lt;&lt; 'Dance dance, la la land!'
+
+    ryan['dance']()
+    &lt;&lt; 'Dance dance, la la land!'</pre></code>
+                    </li>
+                    <li>Groups of characters can be placed together inside square brackets.
+                        <pre><code>     const vowels = /[aeiou]/
+
+    /[A-Z]/    // All the uppercase letters
+
+    /[0-9]/    // The digits 0-9</code></pre>
+                    </li>
+                    </ul>
                 <h4>Chapter 6</h4>
                 <ul>
-                    <li>Arrays are lists of values and can be created by [] or the Array constructor</li>
-                    <li>Values can be added by assigning them to different indices within the array</li>
-                    <li>You can have different types in one array (like string, numbers, other arrays, etc)</li>
-                    <li>Values can be deleted using the “delete” operator</li>
-                    <li>Destructuring means to take values out of the array to use separately</li>
-                    <li>Arrays have a length property that shows how many values are in the array</li>
-                    <li>pop() removes the last item, shift() removes the first item, push() adds a new value to the end, and unshift() adds a value to the start</li>
-                    <li>concat() or a spread operator (...) can be used to merge one or more arrays together</li>
-                    <li>join() can be used to convert an array into a string, and you can specify what character to join the strings within the array with</li>
-                    <li>slice() can create an array from another array, and splice() can replace a value in an array with another</li>
-                    <li>There are multiple ways to find if a value is in an array, like indexOf() and includes()</li>
-                    <li>Arrays can be multidimensional, like a matrix</li>
-                    <li>A Set is like an array but it cannot contain duplicate values, only unique values</li>
-                    <li>Memory leaks happen when a variable that isn’t being used is still stored in memory, but modern languages like JS have garbage collection which automatically removes unused values</li>
-                    <li>Maps can be used to keep a list of key and value pairs, keys need to be strings and can be used to refer to the value stored with them</li>
-                    <li>get() can be used to look up a value by key, has() checks if the value exists, delete() removes the key value pair, and set() will add a key value pair</li>
-                    <li>If/else statements can be used to run code only if a certain condition is met</li>
-                    <li>Ternary operators and switch statements fulfill similar functions but with different syntax and use cases</li>
-                    <li>While and for loops let us run code repeatedly until a certain condition is met (or infinitely, for an infinite loop)</li>
-                    <li>For loops are good for looping through arrays due to the syntax of the for loop</li>
-                </ul>
+                    <li>"The Document Object Model (DOM) allows you to access elements of a web page and enable interaction with the page by adding and removing elements, changing the order, content and attributes of elements, and even altering how they are styled"</li>
+                    <li>The Document Object Model (DOM) represents an HTML document as a network of connected nodes that form a tree-like structure. It treats everything on a web page as a node</li>
+                    <li>The DOM stores any whitespace that is in the HTML document as text nodes, so there appear to be some extra text nodes</li>
+                    <li>Console Shortcuts:
+                        <ul><li>Pressing TAB will autocomplete any methods and should show you a list of possible methods</li>
+                            <li>Pressing the UP arrow key will select the previous command entered.</li>
+                        </ul>
+                    </li>
+                    <li>Node Type Code
+                        <ul><li>1	element</li>
+                            <li>2	attribute</li>
+                            <li>3	text</li>
+                            <li>8	comment</li>
+                            <li>9	body</li>
+                        </ul>
+                    </li>
+                    <li>The document.getElementById(), document.getElementsByClassName(), document.getElementsByTagNames() and document.querySelector() can be used to access elements on a page.</li>
+                    <li>The createElement() and createTextNode() methods can be used to create dynamic markup on the fly.</li>
+                    </ul>
                 <h4>Chapter 7</h4>
                 <ul>
-                    <li>Functions can be declared using the “function” key word and with a name</li>
-                    <li>Anonymous functions don’t have names and can be assigned to variables</li>
-                    <li>Functions are called by entering its name with parentheses, and either return undefined by default or whatever value the programmer set it to return</li>
-                    <li>Parameters are set when the function is defined, while arguments are for when the function is invoked</li>
-                    <li>Values can be passed into functions on the fly using parameters/arguments</li>
-                    <li>You can pass as many arguments as you want into a function, and the rest operator (...) can put all arguments into an array to be used within the function</li>
-                    <li>Default parameters can be set within the function declaration using the equal sign</li>
-                    <li>Arrow functions (const square = x => x*x) are simpler ways to create anonymous functions</li>
-                    <li>Hoisting allows functions/variables to be called before they’re defined in the code</li>
-                    <li>Callbacks allow other functions to be passed as arguments into a function, which can be called within that function</li>
-                    <li>forEach(), map(), reduce(), and filter() are some ways to iterate through arrays</li>
-                </ul>
-
-            <h3>Coding Exercise:</h3>
-            <p>Below are the codes for Quiz Ninja Project.</p>
-            <a href="quiz-ninja.html">> Play Quiz Ninja</a>
-            
-            <pre><code>
-            <b>quiz-ninja.html</b>
-
-            &lt;!DOCTYPE html>
-                &lt;html>
-                    &lt;head>
-                        &lt;meta charset="UTF-8" />
-                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                        &lt;title>Week 02 - WDD 330 Portfolio - Kisetsu Irie&lt;/title>
-                        &lt;link href="quiz-ninja.css" rel="stylesheet">&lt;/script>
-                    &lt;/head>
-
-                    &lt;body>
-                    &lt;section class='dojo'>
-                        &lt;div class="wrapper">
-                        &lt;header>
-                            &lt;h1>Quiz Ninja!&lt;/h1>
-                            &lt;button onclick="start(quiz)">Start&lt;/button>
-                        &lt;/header>
-                        &lt;/div>
-                    &lt;/section>
-                    &lt;script type="text/javascript" src="quiz-ninja.js">&lt;/script>
-                    &lt;/body>
-                &lt;/html>
-  
-            </code></pre>
-
-            <pre><code>
-            <b>quiz-ninja.js</b>
-
-            // Set the questions
-            const quiz = [
-                ["What is the name of world's highest mountain","Mount Everest"],
-                ["Who is the current president of the United States?","Joe Biden"],
-                ["What is the name of world's longest river?","Nile"]
-            ];
-
-            function start(quiz){
-            let score = 0;
-
-            // main loop
-            for(const [question,answer] of quiz){
-                const response = ask(question);
-                check(response,answer);
-            }
-            // end of main game loop
-            gameOver();
-
-            // ask and check
-            function ask(question){
-                return prompt(question);
-            }
-
-            function check(response,answer){
-                // check if answer is correct
-                if(response === answer){
-                alert('Correct!');
-                // increase score by 1
-                score++;
-                } else {
-                alert(`Wrong. The correct answer was ${answer}`);
-                }
-            }
-
-            function gameOver(){
-                // Report the player's score
-                alert(`Game Over, you scored ${score} point${score !== 1 ? 's' : ''}`);
-            }
-            }
-            </code></pre>
-
-            <pre><code>
-            <b>quiz-ninja.css</b>
-
-            @import url('https://fonts.googleapis.com/css?family=Baloo+Da|Roboto');
-
-            body{
-            background: #5F1C1C;
-            font-family: 'Roboto', sans-serif;
-            }
-            .dojo{
-            background: url(https://cdn.rawgit.com/alexmwalker/6acbe9040d9fe6e5e9fd758a25e1b2a5/raw/9c8131eb2ccc1e3839a5a5114cb16b5dc74daf04/dojo.svg) no-repeat;
-            width: 100%;
-            height: 800px;
-            background-size: 100% auto;
-            padding-top: 10px;
-            }
-            .wrapper{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 150px;
-            background: rgba(255,255,255,.9);
-            margin: 150px 33%;
-            box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
-            border-radius: 8px;
-            }
-            h1 {
-            color: #612aaa;
-            font-family: 'Baloo Da', cursive;
-            font-weight: 900;
-            text-align: center;
-            font-size: 48px;
-            margin: 0;
-            }
-            button {
-            color: #ffffff;
-            background-color: #611BBD;
-            border-color: #130269;
-            border-radius: 4px;
-            margin: 0.2em 0;
-            display: block;
-            width: 100%;
-            font-size: 24px;
-            }
-            </code></pre>
+                    <li>Events are what provides the link between the web page and user interactions. Whenever the user interacts with a web page, an event occurs that our program can detect</li>
+                    <li>Event Listener:
+                        <pre><code>     document.body.addEventListener("click", doSomething);</code></pre>
+                    </li>
+                    <li>Inline Event Handler:
+                        <pre><code>     &lt;p onclick="console.log('Clicked!')">Click Me&lt;/p></code></pre>
+                    </li>
+                    <li>Old Event Handler:
+                        <pre><code>     document.onclick = function (){ console.log('Clicked!'); }</code></pre>
+                    </li>
+                    <li>Mouse Events:
+                        <ul><li>click</li>
+                            <li>mouseup</li>
+                            <li>mousedown</li>
+                            <li>dblclick (doubleclick)</li>
+                            <li>mouseover</li>
+                            <li>mouseout</li>
+                            <li>mousemove</li>
+                        </ul>
+                    </li>
+                    <li>We cannot attach both a click and doubleclickevent to the same element because it’s impossible to tell if a click is the first click of a doubleclick or just a single click. This means that a doubleclickevent will alwayscause theclickevent to fire.</li>
+                    <li>Keyboard Events:
+                        <ul><li>touchstart</li>
+                            <li>touchend</li>
+                            <li>touchmove</li>
+                            <li>touchenter</li>
+                            <li>touchleave</li>
+                            <li>touchcancel</li>
+                        </ul>
+                    </li>
+                    <li>Touch Events:
+                        <ul><li>keydown</li>
+                            <li>keyup</li>
+                            <li>keypress</li>
+                        </ul>
+                    </li>
+                    <li>Removing an event Listener (removeEventListener() method):
+                        <pre><code>     const aParagraph = document.getElementById('a');
+                            aParagraph.addEventListener('click', remove);
+                            
+                            function remove(event) {
+                                console.log('removeEventListener() method example');
+                                aParagraph.style.backgroundColor = 'blue';
+                                aParagraph.removeEventListener('click',remove);
+                            }</code></pre>
+                    </li>
+                    <li>preventDefault()is a method of the event object that can be used inside the callback function to stop the default behavior. However, think twice before using the method. Users will expect certain behaviors, and preventing them may cause confusion.</li>
+                    </ul>
 
             <h3>Team Activity Recording:</h3>
             <p>Passcode: gx5^+5Gh</p>
             <a href="https://byui.zoom.us/rec/share/-O2W-PNIzNXQsTddhxpccW4FS0CXKGMsaM9ti24rdbd4bUF0zr69eMqm70IiJV8c.dCa5OUQszUHcUNUr"> Link to the video</a>
             
             <h3>Question:</h3>
-            <p>My question is how this reading assignment should be done. The instruction tells me to submit either the notes OR a coding exercise. So, did I get full credit for the assignment even if I didn't include the coding exercise part? I want to make sure.</p>
+            <p>My question is on Question #6 of the team activity. Individually and as a team, we tried inputting the two lines in the directions in the console on the specified wikipediapage, but it did not do anything for us. The console just output "undefine". We did some research on it during the team activity, and on this <a href="https://towardsdatascience.com/quickly-extract-all-links-from-a-web-page-using-javascript-and-the-browser-console-49bb6f48127b">website</a> we found the code below:</p>
+            <pre><code>     var x = document.querySelectorAll("a");
+                    var myarray = []
+                    for (var i=0; i&lt;x.length; i++){
+                    var nametext = x[i].textContent;
+                    var cleantext = nametext.replace(/\s+/g, ' ').trim();
+                    var cleanlink = x[i].href;
+                    myarray.push([cleantext,cleanlink]);
+                    };
+                    function make_table() {
+                        var table = '&lt;table>&lt;thead>&lt;th>Name&lt;/th>&lt;th>Links&lt;/th>&lt;/thead>&lt;tbody>';
+                       for (var i=0; i&lt;myarray.length; i++) {
+                                table += '&lt;tr>&lt;td>'+ myarray[i][0] + '&lt;/td>&lt;td>'+myarray[i][1]+'&lt;/td>&lt;/tr>';
+                        };
+                     
+                        var w = window.open("");
+                    w.document.write(table); 
+                    }
+                    make_table()</code></pre>
+            <p>We copied and pased these lines into the console and it did the trick. My question is, why didn't the lines in the instruction did not work? Was there anything else we needed to do to make them work? It'll be great if you could let us know anything concerning this question. Thank you!</p>
             
             <a href="../index.html">&lt; Go Back to Index</a>
         </div>
