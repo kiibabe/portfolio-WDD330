@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Week 04 - WDD 330 Portfolio - Kisetsu Irie</title>
+        <link href="../css/style.css" rel="stylesheet"></link>
+    </head>
+
+    <body>
+        <header>
+            <h1>WDD 330 Portfolio - Kisetsu Irie</h1>
+        </header>
+
+        <div id="main">
+            <a href="../index.html">&lt; Go Back to Index</a>
+
+
+            <h2>Week 04</h2>
+            <h3>Notes:</h3>
+                <h4>Chapter 8: Forms</h4>
+                <ul>
+                    <li>Forms: a common method of interacting with a web page
+                        <pre><code>     &lt;!DOCTYPE html>
+        &lt;html lang='en'>
+        &lt;head>
+            &lt;meta charset='utf-8'>
+            &lt;title>Search&lt;/title>
+        &lt;/head>
+        &lt;body>
+            &lt;form name='search' action='/search'>
+                &lt;input name='queryInput'>
+                &lt;button type='submit'>Search&lt;/button>
+            &lt;/form>
+            &lt;script src='javascript.js'>&lt;/script>
+        &lt;/body>
+        &lt;/html></code></pre>
+                    </li>
+                    <li>Accessing Form Elements:
+                        <pre><code>    const form = document.forms[0];
+    const form = document.getElementsByTagname('form')[0];
+    const form = document.forms.search;
+    const form = document.forms['search'];</code></pre>
+                    </li>
+                    <li>Forms UX:
+                        <ul>
+                            <li>Use correct and semantic markup</li>
+                            <li>Make forms keyboard accessible and using WAI-AIRA labels</li>
+                        </ul>
+                    </li>
+                    <li>We need to be careful when using reset buttons because it is generally considered poor UX for it's too easy to click and delete what has been entered,</li>
+                    <li>Form Events:
+                        <ul><li>focus: when an element is focused on</li>
+                            <li>blur: when the user moves the focus away</li>
+                            <li>change: when the user moves the focus away after changing it</li>
+                        </ul>
+                    </li>
+                    <li>We can stop the form from being submitted to that URL altogether by using the "preventDefault()" method</li>
+                    <li>Common form controls:
+                        <ul>
+                            <li>&lt;input></li>
+                            <li>&lt;select></li>
+                            <li>&lt;textarea></li>
+                            <li>&lt;button></li>
+                        </ul>
+                    </li>
+                    <li>New Attributes for input in HTML5:
+                        <ul>
+                            <li>autofocus: Gives focus to this element when a page loads. Equivalent to "document.forms.hero.heroName.focus();"</li>
+                            <li>placeholder: Inserts the value provided in the input field until the user enters some text</li>
+                            <li>maxlength: Limit the number of characters in a field</li>
+                        </ul>
+                    </li>
+                    <li>Hidden fields can be made using input fields with "type='hidden'". It is often used to send information like settings or the information that the user has already provided. It is visible in HTML so we cannot deal with sensitive data with this method.</li>
+                    <li>Form validation: The process of checking whether a user has entered the information into a form correctly
+                        <ul>
+                            <li>Required fields are filled</li>
+                            <li>Email address is valid</li>
+                            <li>Numbers entered where numerical data is required</li>
+                            <li>A password is at least at the minimum length</li>
+                        </ul>
+                    </li>
+                    <li>HTML5 has its own validation API that can be used, although it is not supported from all browsers now. The error messages that it produces can look inconsistent across browsers and are difficult to style</li>
+                </ul>
+                <h4>Chapter 9: The Window Object</h4>
+                <ul>
+                    <li>The window object is the global object in a browser.</li>
+                    <li>The Browser Object Model (or BOM for short) is a collection of properties and methods that contain information about the browser and computer screen. It only makes sense in a browser environment.</li>
+                    <li>In a browser environment, the global object is the　”window　object”</li>
+                    <li>window.navigator: Gives information about the user’s browser and operating system (but it's unrealiable)</li>
+                    <li>window.location: Provides information about the URL of the current page. It takes href, protocol, host, port, pathname, origin, hash, and serach properties.</li>
+                    <li>window.history: Keeps information about the pages that have been visited in the session. There is length property and go(), forward(), and back() methods.</li>
+                    <li>window.screen: Provides information about the user’s screen</li>
+                    <li>document.write() should be avoided</li>
+                    <li>window.setInterval(): Works in a similar way to window.setTimeout(), except that it will repeatedly invoke the callback function after every given number of milliseconds</li>
+                    <li>document.cookie: Lets us store pieces of information between requests</li>
+                    <li>window.setTimeout(): Can be used to call a function after a set amount of time. clearTimeout() can cancel it</li>
+                    <li>window.setInterval(): Can be used to call a function repeatedly. clearInterval() can stop it.</li>
+                    <li>window.requestAnimationFrame(): Produces smooth/optimized animation by using the browser's built-in graphics capabilities. cancelAnimationFrame() can cancel it.</li>
+                </ul>
+                <h4>Chapter 10: Testing and Debugging</h4>
+                <ul>
+                    <li>Types of error
+                        <ul>
+                            <li>System error: There is problem with the system or external devices with which the program is interacting</li>
+                            <li>Programmer error: The program contains incorrect syntax or faulty logic (It could even be as simple as a typo)</li>
+                            <li>User error: The user has entered data incorrectly, which the program is unable to handle</li>
+                        </ul>
+                    </li>
+                    <li>Exception: An error that produces a return value that can then be used by the program to deal with the error</li>
+                    <li>Stack Trace, which an exception will also produce can help us debug. For example, it can help us find where an error originates from.</li>
+                    <li>We need to ensure that the code we write fails loudly because failing silently makes errors difficult to spot and longer to track down.</li>
+                    <li>Strict mode encourages a better quality of JavaScript that befits a programmer, so its use is recommended. It requires the following code to be added at the beginning of a javascript file:
+                        <pre><code>     'use strict';</code></pre>
+                    </li>
+                    <li>"Linting tools" like JS Lint, JS Hint, andES Lint can be used to test the quality of code</li>
+                    <li>"alert()" stops a program from running until OK is clicked, so it allows us to effectively put breakpoints in the code that allows us to check the value of variables at that point</li>
+                    <li>console.trace(): Logs an interactive stack trace in the console. This will show the functions that were called in the lead up to an exception occurring while the code is running</li>
+                    <li>Exceptions can be thrown using the "throw" statement</li>
+                    <li>Any code placed inside a "try" block will pass any error objects to a "catch" block when an exception occurs. Any code inside a "finally" block will run if an exception does or does not occur</li>
+                    <li>Test-driven development: The practice of writing tests that fail, then writing the code that passes the test, then refactoring the code every time a new feature is implemented</li>
+                </ul>
+
+            <h3>Team Activity Recording:</h3>
+            <a href="https://byui.zoom.us/rec/share/eUWRZG1l9HlLeY5q8FeAmbcNuI_P2NS-6b2AZYHw086w4Mq0Ym_MBTpnI7apqJO2.R7Ku1S94qN3rW9MR"> Link to the video</a>
+            
+            <h3>Question:</h3>
+            <p>My question is about the "tie" function logic in the team activity. What my teammate and I came up with were to check if all cells of the table are clicked as shown in the code below:</p>
+            <pre><code>     function draw() {
+        let draw = 0;
+        gameState.forEach((cell, i) => {
+            if (gameState[i] !== null) draw++;
+        });
+            if (draw === 9) {
+                display.innerText = "Draw";
+        }
+    };</code></pre>
+            <p>I thought this was simple and valid, but at the same time, I was fearing that this could be too simple. Was it supposed be more complex? I am curious.</p>
+            
+            <a href="../index.html">&lt; Go Back to Index</a>
+        </div>
+    </body>
+</html>
