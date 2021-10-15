@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Week 05 - WDD 330 Portfolio - Kisetsu Irie</title>
+        <link href="../css/style.css" rel="stylesheet"></link>
+    </head>
+
+    <body>
+        <header>
+            <h1>WDD 330 Portfolio - Kisetsu Irie</h1>
+        </header>
+
+        <div id="main">
+            <a href="../index.html">&lt; Go Back to Index</a>
+
+            <h2>Week 05</h2>
+            <h3>Notes:</h3>
+                <h4>Chapter 10: Testing and Debugging</h4>
+                <ul>
+                    <li>Types of error
+                        <ul>
+                            <li>System error: There is problem with the system or external devices with which the program is interacting</li>
+                            <li>Programmer error: The program contains incorrect syntax or faulty logic (It could even be as simple as a typo)</li>
+                            <li>User error: The user has entered data incorrectly, which the program is unable to handle</li>
+                        </ul>
+                    </li>
+                    <li>Exception: An error that produces a return value that can then be used by the program to deal with the error</li>
+                    <li>Stack Trace, which an exception will also produce can help us debug. For example, it can help us find where an error originates from.</li>
+                    <li>We need to ensure that the code we write fails loudly because failing silently makes errors difficult to spot and longer to track down.</li>
+                    <li>Strict mode encourages a better quality of JavaScript that befits a programmer, so its use is recommended. It requires the following code to be added at the beginning of a javascript file:
+                        <pre><code>     'use strict';</code></pre>
+                    </li>
+                    <li>Debugging in browser:
+                        <ul>
+                            <li>alert(): alert() stops a program from running until OK is clicked. In the past, using alerts for debugging was the only option
+                            <pre><code>     function isThisReality(reality){
+        if (reality = false) {
+            alert(reality);
+            return 'No, you're in a simulation.';
+        }
+        else {
+            return 'Yes, this is the reality.';
+            }
+        }</code></pre>
+                            </li>
+                            <li>Using console:
+                                <ul>
+                                    <li>console.log(): This is like alert() but it does not stop the program</li>
+                                    <li>console.trace(): This will show the functions that were called in the lead up to an exception occurring while the code is running</li>
+                                </ul>
+                            </li>
+                            <li>"debugger" command: This will create a breakpoint that will stop the program and allow us to see where the program is currently at. We shouldn't forget removing any debugger keyword before shipping, or it will freeze the program when people try to use it
+                                <pre><code>     function isThisReality(reality){
+        debugger;
+            if (reality = false) {
+                return 'No, you're in a simulation.';
+            }
+            else {
+                return 'Yes, this is the reality.';
+            }
+    }</code></pre>
+                            </li>
+                            <li>Error objects:
+                                <ul>
+                                    <li>RangeError: A number is outside an allowable range of values</li>
+                                    <li>ReferenceError: A reference is made to an item that doesn’t exist</li>
+                                    <li>SyntaxError: Error in the code syntax</li>
+                                    <li>TypeError: Error in the type of value used</li>
+                                    <li>URIError: There’s a problem encoding or decoding the URI</li>
+                                    <li>InternalError: A non-standard error. an error occurs in the JavaScript engine, like too much recursion</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>"Linting tools" like JS Lint, JS Hint, andES Lint can be used to test the quality of code</li>
+                    <li>console.trace(): Logs an interactive stack trace in the console. This will show the functions that were called in the lead up to an exception occurring while the code is running</li>
+                    <li>Exceptions can be thrown using the "throw" statement</li>
+                    <li>Any code placed inside a "try" block will pass any error objects to a "catch" block when an exception occurs. Any code inside a "finally" block will run if an exception does or does not occur</li>
+                    <li>Test-driven development: The practice of writing tests that fail, then writing the code that passes the test, then refactoring the code every time a new feature is implemented</li>
+                </ul>
+
+            <h3>Team Activity Recording:</h3>
+            <a href="https://youtu.be/-Ix99cxMu5Y">Link to the team's video</a><br><br>
+            <a href="https://youtu.be/I4nhGFWugZc">Link to my video</a>
+            
+            <h3>Question:</h3>
+            <p>My question this week is about what I should include in the portfolio. I am aware that we should have notes for reading assignment for each week and also the challenge assignments. Is there anything else I should consider adding? Should the team activity assignments be the part of portfolio as well? Thank you in advance.</p>
+            
+            <a href="../index.html">&lt; Go Back to Index</a>
+        </div>
+    </body>
+</html>
