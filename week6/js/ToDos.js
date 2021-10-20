@@ -1,5 +1,5 @@
-import localStorageHelper from 'ls.js';
-import Utilities from 'utilities.js';
+import localStorageHelper from './ls.js';
+import Utilities from './utilities.js';
 
 export default class ToDos {
     constructor(name = 'todo') {
