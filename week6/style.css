@@ -3,6 +3,7 @@ body {
     color:rgb(88, 88, 88);
 }
 #wrapper {
+    margin: 0 auto;
     position: relative;
     width: 480px;
     background-color: rgb(234, 240, 237);

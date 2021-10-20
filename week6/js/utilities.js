@@ -8,33 +8,33 @@ export default class Utilities {
         this.completed = !this.completed;
     }
     createElement(updateCallback, removeItemCallback) {
-        let element = document.createElement('div');
-        element.classList.add('task');
+        let element = document.createElement("div");
+        element.classList.add("task");
 
-        let check = document.createElement('label');
-        check.classList.add('checkbox-container');
+        let check = document.createElement("label");
+        check.classList.add("checkbox-container");
         
-        let checkbox = document.createElement('input');
-        checkbox.setAttribute('type', 'checkbox');
-        checkbox.addEventListener('click', (event) => {
+        let checkbox = document.createElement("input");
+        checkbox.setAttribute("type", "checkbox");
+        checkbox.addEventListener("click", (event) => {
             this.toggleTask();
             updateCallback();
         });
-        this.completed ? checkbox.setAttribute('checked', 'true') : "";
+        this.completed ? checkbox.setAttribute("checked", "true") : "";
         
-        let checkmark = document.createElement('span');
-        checkmark.classList.add('check-checkmark');
+        let checkmark = document.createElement("span");
+        checkmark.classList.add("check-checkmark");
         check.appendChild(checkbox);
         check.appendChild(checkmark);
         
-        let name = document.createElement('div');
-        name.classList.add('taskname');
+        let name = document.createElement("div");
+        name.classList.add("taskname");
         name.innerHTML = this.content;
         
-        let button = document.createElement('button');
+        let button = document.createElement("button");
         button.classList.add("taskremove");
         button.innerHTML = "✖︎";
-        button.addEventListener('click', (event) => removeItemCallback(this));
+        button.addEventListener("click", (event) => removeItemCallback(this));
         element.appendChild(check);
         element.appendChild(name);
         element.appendChild(button);
