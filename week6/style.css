@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(88, 88, 88);
+}
+#wrapper {
+    position: relative;
+    width: 480px;
+    background-color: rgb(234, 240, 237);
+    padding: 1em;
+    border-radius: 8px;
+}
+#container {
+    width: 95%;
+    margin: 20px auto;
+}
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+#list {
+    min-height: 350px;
+    width: 100%;
+    margin: 0 auto 20px auto;
+}
+.task {
+    display: flex;
+    margin: 0 auto 10px auto;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid rgb(71, 71, 71);
+    border-radius: 5px;
+}
+.checkbox-container, .taskname, .taskremove {
+    display: inline;
+}
+.checkbox-container {
+    width: 46px;
+    height: 38px;
+}
+input[type="checkbox"] {
+    background-color: #fafafa;
+	border: 1px solid rgb(71, 71, 71);
+    width: 32px;
+    height: 32px;
+	border-radius: 3px;
+    margin-right: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+input[type="checkbox"]:checked {
+	background-color: #3fa4b6;
+	border: 1px solid rgb(71, 71, 71);
+	color: #99a1a7;
+}
+input[type="checkbox"]:checked:after {
+    width: 32px;
+    height:32px;
+	content: '✔︎';
+	font-size: 14px;
+    position: relative;
+    top: 7px;
+    left: 9px;
+	color: white;
+}
+.taskname {
+    font-size: 1.5em;
+    overflow-wrap: anywhere;
+    padding: .3em;
+}
+.taskremove {
+    margin-left: auto;
+    margin-right: 2px;
+    text-align: center;
+    width: 32px;
+    height:32px;
+    color: rgb(121, 121, 121);
+}
+#task-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#new-task {
+    width: 84%;
+    font-size: 1.5em;
+    padding: .33em;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(71, 71, 71);
+    border-radius: 4px;
+}
+#add {
+    width: 11%;
+    height: 46px;
+    margin-left: 5px;
+    font-size: 2em;
+    color: rgb(121, 121, 121);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(71, 71, 71);
+    border-radius: 4px;
+}
+#buttons { float:right; }
+#buttons span {
+    width: 90px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #3fa4b6;
+    background-color: transparent;
+    color: #3fa4b6;
+}
+#buttons input[type="radio"] { display: none; }
+#buttons input[type="radio"]:checked ~ span{ background-color: #3fa4b6; } 
+#buttons input[type="radio"]:checked ~ span:first-of-type { color: rgb(234, 240, 237); }
+#footer { margin-bottom: 20px; }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Todo App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
+  </head>
+
+  <body>
+    <main>
+        <div id="wrapper">
+            <div id="container">
+            <h1>Todos</h1>
+            
+            <div id="list"></div>
+
+            <div id="footer">
+                <span id="total">0 task left</span>
+                <span id="buttons">
+                    <label>
+                        <input type="radio" name="choice" value="all" id="all" checked="checked">
+                        <span id="span-all">All</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="choice" value="active" id="active">
+                        <span>Active</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="choice" value="completed" id="completed">
+                        <span>Completed</span>
+                    </label>
+                </span>
+            </div>
+
+            <div id="task-input">
+                <input type="text" name="task" id="new-task" placeholder="Add Task">
+                <button id="add">+</button>
+            </div>
+            </div>
+        </div>
+        <br>
+        <a href="../index.html">&lt; Back to Index</a>
+    </main>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
