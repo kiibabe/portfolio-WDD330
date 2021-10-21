@@ -1,11 +1,11 @@
-export default class StorageHelper {
+export default class localStorageHelper {
     constructor(storage = window.localStorage) {
         this.storage = storage;
     }
-    load(name) {
-        return this.storage.getItem(name);
+    load(key) {
+        return this.storage.getItem(key);
     }
-    writeToLS(name, info) {
-        this.storage.setItem(name, info);
+    writeToLS(key, data) {
+        this.storage.setItem(key, data);
     }
 }
