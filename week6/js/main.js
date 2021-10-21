@@ -13,6 +13,13 @@ class Todo {
         let input = document.getElementById("new-task");
         this.todoList.addTask(input.value);
         input.value = "";
+        if (document.getElementById('all').checked == true){
+            this.filterAll();
+        } else if (document.getElementById('active').checked == true) {
+            this.filterActive();
+        } else if (document.getElementById('completed').checked == true){
+            this.filterCompleted();
+        }
     }
     
     filterAll() {
@@ -26,4 +33,3 @@ class Todo {
     }
 }
 let todo = new Todo();
-

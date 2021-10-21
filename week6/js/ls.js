@@ -1,9 +1,11 @@
-export default class localStorageHelper {
-    load(key) {
-        const stored = localStorage.getItem(key);
-        return stored == null ? undefined : JSON.parse(stored);
+export default class StorageHelper {
+    constructor(storage = window.localStorage) {
+        this.storage = storage;
     }
-    writeToLS(key, data) {
-        localStorage.setItem(key, data);
+    load(name) {
+        return this.storage.getItem(name);
+    }
+    writeToLS(name, info) {
+        this.storage.setItem(name, info);
     }
 }

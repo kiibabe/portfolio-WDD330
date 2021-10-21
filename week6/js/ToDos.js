@@ -4,7 +4,7 @@ import Utilities from './utilities.js';
 export default class ToDos {
     constructor(name = "todo") {
         this.ls = new localStorageHelper();
-        let templist = this.ls.load(this.name);
+        let templist = JSON.parse(this.ls.load(this.name));
         this.list = [];
         templist?.forEach(x => {
             this.list.push(new Utilities(x.content, x.id, x.completed));
@@ -15,7 +15,7 @@ export default class ToDos {
     addTask(content) {
         let task = new Utilities(content = content);
         this.list.push(task);
-        document.getElementById("list").appendChild(task.createElement(this.save.bind(this), this.removeTask.bind(this)));
+        document.getElementById('list').appendChild(task.createElement(this.save.bind(this), this.removeTask.bind(this)));
         this.save();
     }
     removeTask(task) {
@@ -49,16 +49,16 @@ export default class ToDos {
                 switch (filters) {
                     case "ACTIVE":
                         if (!x.completed) container.appendChild(x.createElement(this.save.bind(this), this.removeTask.bind(this)));
-                        document.getElementById("total").innerHTML = `${numActive} task${numActive > 1 ? 's' : ""} left`;
+                        document.getElementById('total').innerHTML = `${numActive} task${numActive > 1 ? 's' : ""} left`;
                         break;
                     case "COMPLETED":
                         if (x.completed) container.appendChild(x.createElement(this.save.bind(this), this.removeTask.bind(this)));
                         let numCompleted = this.numCompleted();
-                        document.getElementById("total").innerHTML = `${numCompleted} task${numCompleted > 1 ? 's' : ""} completed`;
+                        document.getElementById('total').innerHTML = `${numCompleted} task${numCompleted > 1 ? 's' : ""} completed`;
                         break;
                     default:
                         container.appendChild(x.createElement(this.save.bind(this), this.removeTask.bind(this)));
-                        document.getElementById("total").innerHTML = `${numActive} task${numActive > 1 ? 's' : ""} left`;
+                        document.getElementById('total').innerHTML = `${numActive} task${numActive > 1 ? 's' : ""} left`;
                         break;
                 }
             });
@@ -66,15 +66,15 @@ export default class ToDos {
     }
     updateTotal() {
         let total = this.numUncompleted();
-        if (document.getElementById("all").checked == true){
-            document.getElementById("total").innerHTML = `${total} task${total > 1 ? 's' : ""} left`;
-        } else if (document.getElementById("active").checked == true) {
-            document.getElementById("total").innerHTML = `${total} task${total > 1 ? 's' : ""} left`;
-        } else if (document.getElementById("completed").checked == true){
+        if (document.getElementById('all').checked == true){
+            document.getElementById('total').innerHTML = `${total} task${total > 1 ? 's' : ""} left`;
+        } else if (document.getElementById('active').checked == true) {
+            document.getElementById('total').innerHTML = `${total} task${total > 1 ? 's' : ""} left`;
+        } else if (document.getElementById('completed').checked == true){
             total = this.numCompleted();
-            document.getElementById("total").innerHTML = `${total} task${total > 1 ? 's' : ""} completed`;
+            document.getElementById('total').innerHTML = `${total} task${total > 1 ? 's' : ""} completed`;
         } else {
-            document.getElementById("total").innerHTML = `${total} task${total > 1 ? 's' : ""} left`;
+            document.getElementById('total').innerHTML = `${total} task${total > 1 ? 's' : ""} left`;
         }
     }
 }
