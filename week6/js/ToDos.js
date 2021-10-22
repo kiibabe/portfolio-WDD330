@@ -4,12 +4,12 @@ import Utilities from './utilities.js';
 export default class ToDos {
     constructor(name = "todo") {
         this.ls = new localStorageHelper();
+        this.name = name;
         let templist = JSON.parse(this.ls.load(this.name));
         this.list = [];
         templist?.forEach(x => {
             this.list.push(new Utilities(x.content, x.id, x.completed));
         });
-        this.name = name;
         this.renderList();
     }
     addTask(content) {
