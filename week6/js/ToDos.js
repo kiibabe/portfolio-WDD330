@@ -8,7 +8,7 @@ export default class ToDos {
         this.list = [];
         templist?.forEach(x => {
             this.list.push(new Utilities(x.content, x.id, x.completed));
-        })
+        });
         this.name = name;
         this.renderList();
     }

@@ -1,5 +1,6 @@
 export default class localStorageHelper {
-    constructor(storage = window.localStorage) {
+    
+    constructor(storage = localStorage) {
         this.storage = storage;
     }
     load(key) {
