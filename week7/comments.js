@@ -64,7 +64,7 @@ export default class Comment {
   }
 
   addCommentListner(name) {
-    document.getElementById("submitButton").ontouchend = () => {
+    document.getElementById("submitButton").onclick = () => {
       let comment = document.getElementById("commentText").value;
       this.commentModel.addComment(name, comment);
       this.showCommentsList(name);
