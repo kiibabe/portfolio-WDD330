@@ -2,7 +2,7 @@ class CommentModel {
   constructor(type) {
     this.type = type;
     this.comments = [];
-    let lsComments = window.localStorage.getItem(this.type);
+    let lsComments = localStorage.getItem(this.type);
     if (lsComments) {
       this.comments = JSON.parse(lsComments);
     }
@@ -23,7 +23,7 @@ class CommentModel {
       date: new Date()
     };
     this.comments.push(commentObject);
-    window.localStorage.setItem(this.type, JSON.stringify(this.comments));
+    localStorage.setItem(this.type, JSON.stringify(this.comments));
   }
 }
 
