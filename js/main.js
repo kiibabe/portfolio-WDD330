@@ -24,7 +24,10 @@ const links = [
     {
       label: "Challenge One",
       url: "week6/index.html"
-    },
+    }
+]
+
+const links2 = [
     {
       label: "Week 07 Notes",
       url: "week7/index.html"
@@ -34,5 +37,8 @@ const links = [
 function list() {
     for (const e of links) {
         document.getElementById("list").innerHTML += '<li class="index-bullet"><a href="' + e.url + '">' + e.label + '</a></li>';
+    }
+    for (const e of links2) {
+        document.getElementById("list2").innerHTML += '<li class="index-bullet"><a href="' + e.url + '">' + e.label + '</a></li>';
     }
 }
