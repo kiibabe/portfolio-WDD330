@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Week 07 - WDD 330 Portfolio - Kisetsu Irie</title>
+        <link href="../css/style.css" rel="stylesheet"></link>
+    </head>
+
+    <body>
+        <header>
+            <h1>WDD 330 Portfolio - Kisetsu Irie</h1>
+        </header>
+
+        <div id="main">
+            <a href="../index.html">&lt; Go Back to Index</a>
+
+            <h2>Week 07</h2>
+            <h3>Notes:</h3>
+                <h4>Chapter 11: Further Functions</h4>
+                <ul>
+                    <li>In JavaScript, functions are first-class objects, so they can be passed around just like other values</li>
+                    <li>Functions can have their own properties and methods</li>
+                    <li>call() &  apply() methods: They can invoke a function with the value of "this" bound to an object that is provided as an argument. Useful if the data that is being used as an argument is already in the form of an array</li>
+                    <li>cache property: When a function takes a long time to compute a return value, we can save the result in cache property. It enables us to return the saved value, rather than computing it again</li>
+                    <li>Immediately Invoked Function Expression: IIFE. An anonymous function.
+                        <pre><code>  (function(){
+        const name = 'Kisetsu';
+        console.log(`Hello ${name}`);
+    })();</code></pre></li>
+                    <li>Safe use of "strict" mode
+                        <pre><code>  (function() {
+        'use strict';
+                        
+        // All your code would go inside this function
+                        
+    })();</code></pre></li>
+                    <li>Functions are able to dynamically redefine themselves in the body of the function, depending on certain conditions</li>
+                    <li>Recursive function: This keeps invoking itself until the designated condition is met. Useful when iterative processes are involved</li>
+                    <li>JavaScript is a single-threaded environment</li>
+                    <li>Callback: Provided as an argument to another function</li>
+                    <li>Callback hell: A common issue. Tangled mess of code</li>
+                    <li>Promises: Represents the future result of an asynchronous operation. This can be used instead of callbacks to deal with multiple asynchronous actions in sequence. They also provide a nicer mechanism for handling errors</li>
+                    <li>Creating a promise:
+                        <pre><code>  const promise = new Promise( (resolve, reject) => {
+        // initialization code goes here
+        if (success) {
+            esolve(value);
+        } else {
+            reject(error);
+        }
+    });</code></pre></li>
+                    <li>Functions that return other functions: Higher-order functions</li>
+                    <li>Generator: Put an asterisk (*) after the function keyword. This return an iterator object that provides a next() method</li>
+                    <li>Pure functions: Do not rely on the state of the code, have no side-effects, and always give the same result when given the same arguments</li>
+                    <li>Closure: One of JavaScript’s most powerful features. A reference to a variable that was created inside the scope of another function, but is then kept alive and used in another part of the program</li>
+                </ul>
+
+                <h4>Chapter 13: AJAX</h4>
+                <ul>
+                    <li>Ajax allows web pages to communicate asynchronously with a server, and it dynamically updates without reloading</li>
+                    <li>API: An application programming interface: A collection of methods that allows external access to another program or service</li>
+                    <li>Ajax can be used for communicating with external APIs</li>
+                    <li>The Fetch API: fetch() method</li>
+                    <li>The data is usually sent in the form of JSON</li>
+                    <li><a href="./quiz.html">Quiz Ninja</a></li>
+                </ul>
+
+            <h3>Team Activity:</h3>
+            <a href="hiking-complete.html">My solution</a><br><br>
+            <a href="https://youtu.be/71qj4vB5rKM">Link to the team meeting's recording</a><br><br>
+            
+            <h3>Question & Comment:</h3>
+            <p>It looks like the instructor's solution for the team activity this week does not really work.</p>
+            
+            <a href="../index.html">&lt; Go Back to Index</a>
+        </div>
+    </body>
+</html>
