@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Week 08 - WDD 330 Portfolio - Kisetsu Irie</title>
+        <link href="../css/style.css" rel="stylesheet"></link>
+    </head>
+
+    <body>
+        <header>
+            <h1>WDD 330 Portfolio - Kisetsu Irie</h1>
+        </header>
+
+        <div id="main">
+            <a href="../index.html">&lt; Go Back to Index</a>
+
+            <h2>Week 08</h2>
+            <h3>Notes:</h3>
+                <h4>HTML5 & CSS3 FOR THE REAL WORLD</h4>
+                <h4>Chapter 8: Transforms and Transitions</h4>
+                <ul>
+                    <li>With CSS3, we can move things around without a line of JavaScript</li>
+                    <li>Transforms:
+                        <ul>
+                            <li>This property you lets us translate, rotate, scale, and/or skew any element</li>
+                            <li>Transform does not work on inline element</li>
+                            <li>We can change the origin with <code>transform-origin</code></li>
+                            <li>Translation:
+                                <ul>
+                                    <li>This function allows us to move elements left, right, up, or down</li>
+                                    <li>Moving an element 50px from the left and 50px to the top
+                                        <pre><code>  transform: translate(50px, -50px);</code></pre>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Scale:
+                                <ul>
+                                    <li>This function allows us to enlarge or shrink an element</li>
+                                    <li>scale(1): default, scale(2): doubled, scale(0.5): half</li>
+                                    <li>Enlarging an element by 1.5 * x and 0.25 * y
+                                        <pre><code>  transform: scale(1.5, 0.25);</code></pre>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Rotate:
+                                <ul>
+                                    <li>This function rotates an element around the point of origin by a specified angle value</li>
+                                    <li>Rotating an element by 90 degrees
+                                        <pre><code>  transform: rotate(90deg);</code></pre>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Skew:
+                                <ul>
+                                    <li>This function specifies a skew along the x and y axes
+                                        <pre><code>  transform: skew(10deg, 10deg);</code></pre>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>Transitions:
+                        <ul>
+                            <li>This property allows the values of CSS to change over time, providing simple animations</li>
+                            <li><code>transition-duration</code>
+                                <ul>
+                                    <li>How long the transition will take</li>
+                                    <li>Set in s (seconds) or ms (milliseconds)</li>
+                                    <li><pre><code>  transition-duration: 0.2s;</code></pre></li>
+                                    <li>"200ms is generally considered the optimum time for a transition: anything slower will make the website seem slow, drawing generally unwanted attention to what was supposed to be a subtle effect. Anything faster may be too subtle."</li>
+                                </ul>
+                            </li>
+                            <li><code>transition-timing-function</code>
+                                <ul>
+                                    <li>This lets us control the pace of the transition more in detail</li>
+                                    <ul>
+                                        <li>ease</li>
+                                        <li>ease-in</li>
+                                        <li>ease-out</li>
+                                        <li>linear</li>
+                                        <li>cubic-bezier</li>
+                                        <li>steps</li>
+                                    </ul>
+                                </ul>
+                            </li>
+                            <li><code>transition-delay</code>
+                                <li>Introduces a delay before the transition begins</li>
+                                <li><pre><code>  transition-delay: 50ms;</code></pre></li>
+                            </li>
+                            <li>Keyframes:
+                                <li>To animate an element, first create a named animation, then attach it to an element</li>
+                                <li><pre><code>  @keyframes moveRight { 
+        /* put animation keyframes here */
+        from {
+            transform: translateX(-50%);
+        }
+        to {
+            transform: translateX(50%);
+        }
+    }
+    @keyframes appearDisappear { 
+        0%, 100% {
+            opacity: 0;
+        }
+        20%, 80% {
+            opacity: 1;
+        }
+    }</code></pre></li>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Animation properties
+                        <ul>
+                            <li>animation-name</li>
+                            <li>animation-duration</li>
+                            <li>animation-timing-function</li>
+                            <li>animation-iteration-count</li>
+                            <li>animation-direction</li>
+                            <li>animation-delay</li>
+                            <li>animation-fill-mode</li>
+                            <li>animation-play-state</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Chapter 12: Canvas, SVG, and Drag and Drop</h4>
+                <ul>
+                    <li>Canvas
+                        <ul>
+                            <li>With HTML5’s Canvas API, we can draw anything we can imagine through JavaScript</li>
+                            <li>* The text in between the canvas tags will only be visible if canvas is not supported by the viewer's browser
+                                <pre><code>  &#60;canvas id="myCanvas" class="myCanvas" width="200" height="200">
+        Sorry! Your browser doesn’t support Canvas.
+    &#60;/canvas></code></pre></li>
+                        </ul>
+                    </li>
+                    <li>SVG:
+                        <ul>
+                            <li>Stands for Scalable Vector Graphics</li>
+                            <li>Drawing a circle:
+                                <pre><code>  &#60;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+                    &#60;circle cx="50" cy="50" r="25" fill="black"/>
+                &#60;/svg></code></pre>
+                            </li>
+                            <li><code>&#60;desc></code> tag: Adds description</li>
+                            <li><code>&#60;rect></code> tag: Describe a rectangle</li>
+                            <li>We can utilize tools like Inkscape and Raphaël to make it easier</li>
+                        </ul>
+                    </li>
+                    <li>Drag and Drop
+                        <ul>
+                            <li>This API allows you to specify that certain elements are draggable, and then specify what should happen when these draggable elements are dragged over or dropped onto other elements on the page</li>
+                            <li>Adding <code>draggable="true"</code> attribute to an element</li>
+                            <li>Draggable is not a Boolean attribute, so you have to set it exactly to true</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <h3>Team Activity:</h3>
+            <a href="./pokeapi.html">My solution</a><br><br>
+            <a href="https://youtu.be/ii50oeJwE5M">Link to the team meeting's recording</a><br><br><br><br>
+            
+            <a href="../index.html">&lt; Go Back to Index</a>
+        </div>
+    </body>
+</html>
