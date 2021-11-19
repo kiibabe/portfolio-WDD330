@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Week 10 - WDD 330 Portfolio - Kisetsu Irie</title>
+        <link href="../css/style.css" rel="stylesheet"></link>
+    </head>
+
+    <body>
+        <header>
+            <h1>WDD 330 Portfolio - Kisetsu Irie</h1>
+        </header>
+
+        <div id="main">
+            <a href="../index.html">&lt; Go Back to Index</a>
+
+            <h2>Week 10</h2>
+            <h3>Notes:</h3>
+                <h4>MDN Web Docs</h4>
+                <h4>Validating Forms</h4>
+                <ul>
+                    <li>Client side validation can be done via HTML5 validation features or JS</li>
+                    <li>Required, min/max, type, and pattern are examples of build in form validation</li>
+                    <li>Required makes the input mandatory, so the form cannot be submitted until filled</li>
+                    <li>Pattern can match input with regular expressions</li>
+                    <li>Min/max length will restrain the number of characters that can be entered into a text field</li> 
+                    <li>The constraint validation API in JS can be used to control the feel of error messages or be compatible with old browsers</li>
+                    <li><code>ValidationMessage</code>: sends message about which validations failed</li>   
+                    <li><code>Validity</code>: returns if the input is valid based on different criteria</li>     
+                    <li>Some of the validation include patternMismatch (pattern), tooLong/tooShort (min/maxlength), typeMismatch (type), and valueMissing (required)</li>  
+                    <li><code>willValidate</code>: returns true if value will be validated</li>  
+                    <li><code>checkValidity()</code>: checks if element is valid, and returns a boolean value</li>
+                    <li><code>reportValidity()</code>: uses events to report elements that are invalid</li>
+                    <li><code>setCustomValidity()</code>: allows user to set custom error messages for failed validations that normally aren’t part of the HTML5 standard form validations</li>
+                    <li>Error messages can be customized using CSS and :invalid pseudo-class</li>       
+                    <li>If the constraint validation API doesn’t fit your use case (like adding custom controls), then stand alone validation can be implemented in JS directly</li>  
+                </ul>
+
+
+                <h4>Using Fetch</h4>
+                <ul>
+                    <li>Fetch API helps create and receive HTTP requests and responses respectively</li>
+                    <li>Basic fetch structure:
+                        <pre><code>  fetch('http://example.com/api).then(response => response.json()).then(data => console.log(data));</code></pre></li>
+                    <li>Fetch can also accept an init parameter that can be used to configure things like method, headers, etc.</li>
+                    <li>Credentials can be set in init for cross origin and same origin calls</li>
+                    <li>The body parameter can be included to send data in a POST or PUT request</li> 
+                    <li>If the input type is “file”, then that file can be sent as part of the body in the request</li>
+                    <li>Check Response.ok to see if fetch was successful -- will return an error in case of CORS or network issues</li>   
+                    <li>Client and server side errors can be caught after returning the response object in case of a successful fetch</li>     
+                    <li>The Headers() constructor can be used to add and manage headers by appending and deleting them</li>  
+                    <li>The response object includes status code that tells us how the request was handled by the server</li>  
+                    <li>The body can accept a variety of types, like string, Blob (file), ArrayBuffer, FormData, and others</li>     
+                </ul>
+
+            <h3>Team Activity:</h3>
+            <a href="./quake.html">My solution</a><br><br>
+            <a href="https://youtu.be/v5XmtkRciAc">Link to the team meeting's recording</a><br><br><br><br>
+            
+            <a href="../index.html">&lt; Go Back to Index</a>
+        </div>
+    </body>
+</html>
