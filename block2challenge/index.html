@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>title</title>
-    <link href="style.css" rel="stylesheet">
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Challenge Two - WDD 330 Portfolio - Kisetsu Irie</title>
+        <link href="../css/style.css" rel="stylesheet"></link>
+    </head>
 
-  <body>
-    <div id="overlay">
-      <div id="login">
-        <h1>Spotify Stats</h1>
-        <p class="description">See your top tracks and artists and share the result with your friends and family!</p>
-        <button id="auth">Log in</button>
-        <p class="small">* Login with Spotify Premium Account</p>
-      </div>
+    <body>
+        <header>
+            <h1>WDD 330 Portfolio - Kisetsu Irie</h1>
+        </header>
 
-      <div id="content" hidden>
-        <div id="header" hidden>
-          <h2 id="loginMessage"></h2>
-          <p id="userEmail"></p>
-        </div>
-        <div id="stats" hidden>
-          <div id="tracks" hidden>
-            <h2>Your Top Tracks</h2>
-            <table id="topTracks"></table>
-          </div>
-          <div id="artists" hidden>
-            <h2>Your Top Artists</h2>
-            <table id="topArtists"></table>
-          </div>
-        </div>
-        <div id="save" hidden>
-          <h2>Save Your Stats</h2>
-          <h4>How it works</h4>
-          <p>Clicking the "Save" button below will convert the stats above into an image. <br> You can then save that image as you would save any other image on the internet.</p>
-          <button id="saveStats">Save</button><br><br>
-          <div id="statImage" hidden>
-            <p>Your stats are ready! In order to save it, right click below and click "Save Image As".</p>
-            <hr>
-          </div>
-        </div>
-      </div>
-    </div>
+        <div id="main">
+            <a href="../index.html">&lt; Go Back to Index</a>
 
-    <script type="module" src="main.js"></script>
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-  </body>
+            <h2>Challenge Two</h2>
+            <h3>Proposal:</h3>
+                <h4>Purpose</h4>
+                <p>I am planning to make a web application that will allow users to log in to their Spotify account and get stats for their top/favorite artists and tracks using the Spotify Web APIs. Also, using html5 canvas, the user can save their stats to their computer by saving it as an image.</p>
+                
+                <h4>Purpose</h4>
+                <p>The audience is any Spotify premium subscriber who wants to know what is their top artists/tracks for the past several years for fun. They can also share the result with their friends and families by downloading the image.</p>
+                
+                <h4>Data Sources</h4>
+                <p>Spotify APIs (External API)</p>
+
+                <h4>Module List</h4>
+                <ul>
+                    <li>SpotifyService.js - calls Spotify API to get user stats</li>
+                    <li>SpotifyController.js - uses SpotifyService to get data, and renders it to the screen using HTML</li>
+                    <li>StatsController.js - uses html2 canvas to output stats as image and allow users to download it</li>
+                    <li>LoginController.js - uses SpotifyService to get user tokens, and assists in login process</li>
+                    <li>main.js - module serves as a main controller</li>
+                    <li>utilities.js - uses to send the request</li>
+                    <li>spotifyIndex.html - contains references to JS scripts, css stylesheet, and html elements so JS can render</li> 
+                    <li>styles.css - contains styles for index.html</li>
+                </ul>
+
+            <h3>Web App:</h3>
+            <a href="./spotifyIndex.html">Link to the Spotify Stats App</a><br><br>
+
+            <h3>Screen Recording:</h3>
+            <a href="https://youtu.be/68TG7OR8aMg">Link to the screeb recording of the app</a><br><br><br><br>
+            
+            <a href="../index.html">&lt; Go Back to Index</a>
+        </div>
+    </body>
 </html>
