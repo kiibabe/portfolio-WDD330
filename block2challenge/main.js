@@ -1,6 +1,6 @@
-import { SpotifyAuth } from "./loginController.js";
+import { SpotifyAuth } from "./LoginController.js";
 import { SpotifyController } from "./SpotifyController.js";
-import { StatsController } from "./statsController.js";
+import { StatsController } from "./StatsController.js";
 
 const authModule = new SpotifyAuth();
 
