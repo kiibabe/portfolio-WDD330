@@ -2,7 +2,7 @@ export class SpotifyAuth {
   constructor() {
     this.token = null;
     this.clientId = "6421d27b5cf94b49a275c78c46437f15";
-    this.redirectUrl = "http://localhost:8081";
+    this.redirectUrl = "https://kiibabe.github.io/portfolio-WDD330/block2challenge/spotifyIndex.html";
     this.scope = 'user-read-private user-read-email user-top-read';
   }
 
